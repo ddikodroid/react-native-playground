@@ -7,11 +7,15 @@ import {
   Dimensions,
   ScrollView,
 } from 'react-native';
+import RegistrationScreen from './RegistrationScreen'
 
 const HomeScreen = ({navigation}) => {
   const Move = () => {
     navigation.navigate('Top Tab Example');
   };
+  const MoveToRegistration = () => {
+    navigation.navigate('Registration')
+  }
 
   const fontStyling = {fontSize: 27, fontWeight: 'bold'};
   return (
@@ -32,6 +36,9 @@ const HomeScreen = ({navigation}) => {
         </View>
         <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
           <Button onPress={Move} title="Move to Details" />
+        </View>
+        <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
+          <Button onPress={MoveToRegistration} title="Sign In"/>
         </View>
       </View>
     </ScrollView>
