@@ -1,15 +1,31 @@
 import React from 'react'
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
 
-const DataDetailsScreen = ({navigation}) => {
+const DataDetailsScreen = ({route, navigation} ) => {
+    const {nama, usia, alamat} = route.params
     return (
+        <>
         <View style={s.flexArea}>
-            <Text>DataDetails</Text>
+            <DataDiri nama={nama} usia={usia} alamat={alamat}/>
         </View>
+        </>
     )
 }
 
 export default DataDetailsScreen
+
+const DataDiri = (props) => {
+    const {nama, usia, alamat} = props;
+   // const {nama, usia, setNama} = props;
+    return (
+      <View>
+        <Text>Nama: {nama}</Text>
+        <Text>Umur: {usia} tahun</Text>
+        <Text>Alamat: {alamat}</Text>
+        {/* <TextInput onChangeText={setNama} value={nama} /> */}
+      </View>
+    );
+  };
 
 const s = StyleSheet.create({
     flexArea: {
