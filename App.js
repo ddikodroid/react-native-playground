@@ -9,6 +9,7 @@ import HomeScreen from './src/components/HomeScreen';
 import DetailsScreen from './src/components/DetailsScreen';
 import RegistrationScreen from './src/components/RegistrationScreen';
 import DataDetailsScreen from './src/components/DataDetailsScreen';
+import ModalScreen from './src/components/ModalScreen';
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Stack.Screen name="Top Tab Example" component={DetailsScreen}/>
           <Stack.Screen name="Registration" component={RegistrationScreen}/>
           <Stack.Screen name="Data Details" component={DataDetailsScreen}/>
+          <Stack.Screen name="Latihan Modal" component={ModalScreen}/>
         </Stack.Navigator>
       }
     </NavigationContainer>
