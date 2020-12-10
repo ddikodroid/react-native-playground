@@ -7,6 +7,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import HomeScreen from './src/components/HomeScreen';
 import DetailsScreen from './src/components/DetailsScreen';
+import RegistrationScreen from './src/components/RegistrationScreen';
+import DataDetailsScreen from './src/components/DataDetailsScreen';
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -16,6 +18,8 @@ const App = () => {
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Top Tab Example" component={DetailsScreen}/>
+          <Stack.Screen name="Registration" component={RegistrationScreen}/>
+          <Stack.Screen name="Data Details" component={DataDetailsScreen}/>
         </Stack.Navigator>
       }
     </NavigationContainer>
