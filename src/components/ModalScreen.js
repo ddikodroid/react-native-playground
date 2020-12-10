@@ -5,24 +5,15 @@ const ModalScreen = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const handleVisible = () => {
-<<<<<<< HEAD
     setModalVisible(!modalVisible);
   };
-=======
-      setModalVisible(!modalVisible);
-  }
->>>>>>> c5a29958d01c1efbcf87e183bc3fa3fed5bb59e4
   return (
     <View style={s.modalHomeScreen}>
       <Modal
-        animationType="fade"
+        animationType="slide"
         transparent={true}
         visible={modalVisible}
-<<<<<<< HEAD
         onRequestClose={() => setModalVisible(!modalVisible)}>
-=======
-        onRequestClose={()=>setModalVisible(!modalVisible)}>
->>>>>>> c5a29958d01c1efbcf87e183bc3fa3fed5bb59e4
         <View style={[s.flexArea, {backgroundColor: 'pink'}]}>
           <Text>Ini modal</Text>
           <Button
