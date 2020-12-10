@@ -19,6 +19,9 @@ const HomeScreen = ({navigation}) => {
   const MoveToModal = () => {
     navigation.navigate('Latihan Modal')
   }
+  const MoveToFlatList = () => {
+    navigation.navigate('Latihan Flat List')
+  }
 
   const fontStyling = {fontSize: 27, fontWeight: 'bold'};
   return (
@@ -45,6 +48,9 @@ const HomeScreen = ({navigation}) => {
         </View>
         <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
           <Button onPress={MoveToModal} title="Latihan Modal"/>
+        </View>
+        <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
+          <Button onPress={MoveToFlatList} title="Latihan Flat List"/>
         </View>
       </View>
     </ScrollView>
