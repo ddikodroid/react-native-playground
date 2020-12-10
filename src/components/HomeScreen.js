@@ -16,6 +16,9 @@ const HomeScreen = ({navigation}) => {
   const MoveToRegistration = () => {
     navigation.navigate('Registration')
   }
+  const MoveToModal = () => {
+    navigation.navigate('Latihan Modal')
+  }
 
   const fontStyling = {fontSize: 27, fontWeight: 'bold'};
   return (
@@ -39,6 +42,9 @@ const HomeScreen = ({navigation}) => {
         </View>
         <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
           <Button onPress={MoveToRegistration} title="Sign In"/>
+        </View>
+        <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
+          <Button onPress={MoveToModal} title="Latihan Modal"/>
         </View>
       </View>
     </ScrollView>
