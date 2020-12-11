@@ -10,7 +10,7 @@ const ModalScreen = () => {
   return (
     <View style={s.modalHomeScreen}>
       <Modal
-        animationType="fade"
+        animationType="slide"
         transparent={true}
         visible={modalVisible}
         onRequestClose={() => setModalVisible(!modalVisible)}>
