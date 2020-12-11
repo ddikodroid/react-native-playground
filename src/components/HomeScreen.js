@@ -7,56 +7,54 @@ import {
   Dimensions,
   ScrollView,
 } from 'react-native';
-import RegistrationScreen from './RegistrationScreen'
+import RegistrationScreen from './RegistrationScreen';
 
 const HomeScreen = ({navigation}) => {
   const Move = () => {
     navigation.navigate('Top Tab Example');
   };
   const MoveToRegistration = () => {
-    navigation.navigate('Registration')
-  }
+    navigation.navigate('Registration');
+  };
   const MoveToModal = () => {
-    navigation.navigate('Latihan Modal')
-  }
+    navigation.navigate('Latihan Modal');
+  };
   const MoveToFlatList = () => {
-    navigation.navigate('Latihan Flat List')
-  }
+    navigation.navigate('Latihan Flat List');
+  };
   const MoveToFlatListUseEffect = () => {
-    navigation.navigate('Latihan Flat List dan useEffect')
-  }
+    navigation.navigate('Latihan Flat List dan useEffect');
+  };
 
-  const fontStyling = {fontSize: 27, fontWeight: 'bold'};
+  const fontStyling = {fontSize: 28, fontWeight: 'bold', color: 'white'};
+  const fontStyling1 = {fontSize: 25, fontWeight: '500', color: 'white'};
   return (
     <ScrollView>
       <View style={s.uiHomeScreen}>
-        <View style={[s.flexArea, {backgroundColor: 'powderblue'}]}>
+        <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
           {/* <Text>Home Screen</Text> */}
-          <Text style={fontStyling}>D</Text>
+          <Text style={fontStyling}>🦄🔥Media Belajar😎🚀</Text>
         </View>
-        <View style={[s.flexArea, {backgroundColor: 'skyblue'}]}>
-          <Text style={fontStyling}>I</Text>
-        </View>
-        <View style={[s.flexArea, {backgroundColor: 'steelblue'}]}>
-          <Text style={fontStyling}>K</Text>
-        </View>
-        <View style={[s.flexArea, {backgroundColor: 'royalblue'}]}>
-          <Text style={fontStyling}>O</Text>
+        <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
+          <Text style={fontStyling1}>D i k o</Text>
         </View>
         <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
           <Button onPress={Move} title="Move to Details" />
         </View>
         <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
-          <Button onPress={MoveToRegistration} title="Sign In"/>
+          <Button onPress={MoveToRegistration} title="Sign In" />
         </View>
         <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
-          <Button onPress={MoveToModal} title="Latihan Modal"/>
+          <Button onPress={MoveToModal} title="Latihan Modal" />
         </View>
         <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
-          <Button onPress={MoveToFlatList} title="Latihan Flat List"/>
+          <Button onPress={MoveToFlatList} title="Latihan Flat List" />
         </View>
         <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
-          <Button onPress={MoveToFlatListUseEffect} title="Latihan FlatList dan useEffect"/>
+          <Button
+            onPress={MoveToFlatListUseEffect}
+            title="Latihan FlatList dan useEffect"
+          />
         </View>
       </View>
     </ScrollView>
@@ -73,8 +71,8 @@ const s = StyleSheet.create({
     marginTop: 10,
   },
   flexArea: {
-    width: Dimensions.get('window').width-10,
-    height: Dimensions.get('window').height/10,
+    width: Dimensions.get('window').width - 10,
+    height: Dimensions.get('window').height / 10,
     marginBottom: 5,
     justifyContent: 'center',
     alignItems: 'center',
