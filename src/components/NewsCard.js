@@ -6,7 +6,7 @@ const NewsCard = ({item}) => {
     <View style={styles.card}>
       <Text style={styles.title}>{item.item.title}</Text>
       <Text style={styles.author}>{item.item.author}</Text>
-      <Image style={styles.image} source={{uri: item.item.urlToImage}}/>
+      <Image style={styles.image} source={{uri: item.item.urlToImage}} />
       <Text style={styles.description}>{item.item.description}</Text>
       {/* <Text>{item.item.author}</Text> */}
     </View>
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 20,
     fontWeight: 'bold',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   description: {
     //width:width,

@@ -9,14 +9,17 @@ const News = ({navigation}) => {
   useEffect(() => {
     //newsResponse()
     getNewsFromAPI();
-  },[]); //input array kosong agar useEffect selalu dijalankan saat ada perubahan di backend
+  }, []); //input array kosong agar useEffect selalu dijalankan saat ada perubahan di backend
 
   // const newsResponse = async() => {
   //   const response = await newAPI.get('/everything?q=bitcoin&from=2020-11-11&sortBy=publishedAt&apiKey=411746820f4540d0b2535ed669b6e85f')
   //   console.log(response.data)
   // }
   const getNewsFromAPI = () => {
-    return newAPI.get('/everything?q=bitcoin&from=2020-11-11&sortBy=publishedAt&apiKey=411746820f4540d0b2535ed669b6e85f')
+    return newAPI
+      .get(
+        '/everything?q=bitcoin&from=2020-11-11&sortBy=publishedAt&apiKey=411746820f4540d0b2535ed669b6e85f',
+      )
       .then(function (response) {
         setNews(response.data.articles);
         console.log(response.data.articles);
@@ -38,8 +41,8 @@ const News = ({navigation}) => {
         data={news}
         keyExtractor={(item, index) => 'key' + index}
         renderItem={(item) => {
-          console.log('ini',item)
-          return <NewsCard item ={item}/>;
+          console.log('ini', item);
+          return <NewsCard item={item} />;
         }}
       />
     </View>
