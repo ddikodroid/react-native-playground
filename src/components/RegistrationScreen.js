@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import {Button, StyleSheet, Text, View, Dimensions} from 'react-native';
 import {TextInput} from 'react-native-gesture-handler';
-import DataDetailsScreen from './DataDetailsScreen'
-
+import DataDetailsScreen from './DataDetailsScreen';
 
 const RegistrationScreen = ({navigation}) => {
   const Move = () => {

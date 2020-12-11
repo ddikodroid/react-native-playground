@@ -11,6 +11,7 @@ import RegistrationScreen from './src/components/RegistrationScreen';
 import DataDetailsScreen from './src/components/DataDetailsScreen';
 import ModalScreen from './src/components/ModalScreen';
 import FlatListScreen from './src/components/FlatListScreen';
+import NewsScreen from './src/components/NewsScreen';
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
           <Stack.Screen name="Data Details" component={DataDetailsScreen}/>
           <Stack.Screen name="Latihan Modal" component={ModalScreen}/>
           <Stack.Screen name="Latihan Flat List" component={FlatListScreen}/>
+          <Stack.Screen name="Latihan Flat List dan useEffect" component={NewsScreen}/>
         </Stack.Navigator>
       }
     </NavigationContainer>

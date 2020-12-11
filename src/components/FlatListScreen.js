@@ -18,7 +18,9 @@ const FlatListScreen = () => {
   const fontStyling = {fontSize: 27, fontWeight: 'bold'};
   return (
     <View style={s.flatListHomeScreen}>
+        {/* flatlist berguna saat pagination supaya memori yang digunakan tidak banyak  */}
       <FlatList
+      numColumns='2'
         data={nama}
         renderItem={({item}) => (
           <View style={[s.flexArea, {backgroundColor: '#f06292'}]}>
@@ -40,7 +42,7 @@ const s = StyleSheet.create({
     marginTop: 10,
   },
   flexArea: {
-    width: 300,
+    width: 200,
     height: 50,
     marginBottom: 5,
     justifyContent: 'center',

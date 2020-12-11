@@ -22,6 +22,9 @@ const HomeScreen = ({navigation}) => {
   const MoveToFlatList = () => {
     navigation.navigate('Latihan Flat List')
   }
+  const MoveToFlatListUseEffect = () => {
+    navigation.navigate('Latihan Flat List dan useEffect')
+  }
 
   const fontStyling = {fontSize: 27, fontWeight: 'bold'};
   return (
@@ -51,6 +54,9 @@ const HomeScreen = ({navigation}) => {
         </View>
         <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
           <Button onPress={MoveToFlatList} title="Latihan Flat List"/>
+        </View>
+        <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
+          <Button onPress={MoveToFlatListUseEffect} title="Latihan FlatList dan useEffect"/>
         </View>
       </View>
     </ScrollView>
