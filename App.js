@@ -12,6 +12,7 @@ import DataDetailsScreen from './src/components/DataDetailsScreen';
 import ModalScreen from './src/components/ModalScreen';
 import FlatListScreen from './src/components/FlatListScreen';
 import NewsScreen from './src/components/NewsScreen';
+import TestReactNativePaper from './src/components/TestReactNativePaper';
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -20,12 +21,19 @@ const App = () => {
       {
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Top Tab Example" component={DetailsScreen}/>
-          <Stack.Screen name="Registration" component={RegistrationScreen}/>
-          <Stack.Screen name="Data Details" component={DataDetailsScreen}/>
-          <Stack.Screen name="Latihan Modal" component={ModalScreen}/>
-          <Stack.Screen name="Latihan Flat List" component={FlatListScreen}/>
-          <Stack.Screen name="Latihan Flat List dan useEffect" component={NewsScreen}/>
+          <Stack.Screen name="Top Tab Example" component={DetailsScreen} />
+          <Stack.Screen name="Registration" component={RegistrationScreen} />
+          <Stack.Screen name="Data Details" component={DataDetailsScreen} />
+          <Stack.Screen name="Latihan Modal" component={ModalScreen} />
+          <Stack.Screen name="Latihan Flat List" component={FlatListScreen} />
+          <Stack.Screen
+            name="React Native Paper"
+            component={TestReactNativePaper}
+          />
+          <Stack.Screen
+            name="Latihan Flat List dan useEffect"
+            component={NewsScreen}
+          />
         </Stack.Navigator>
       }
     </NavigationContainer>

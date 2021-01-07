@@ -25,7 +25,7 @@ const FlatListScreen = () => {
       {/* flatlist berguna saat pagination supaya memori yang digunakan tidak banyak  */}
       <FlatList
         numColumns="2"
-        data={ßnama}
+        data={nama}
         renderItem={({item}) => (
           <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
             <Text style={fontStyling}>{item.nama}</Text>

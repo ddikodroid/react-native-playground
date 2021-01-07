@@ -25,6 +25,9 @@ const HomeScreen = ({navigation}) => {
   const MoveToFlatListUseEffect = () => {
     navigation.navigate('Latihan Flat List dan useEffect');
   };
+  const MoveToRNP = () => {
+    navigation.navigate('React Native Paper');
+  };
 
   const fontStyling = {fontSize: 28, fontWeight: 'bold', color: 'white'};
   const fontStyling1 = {fontSize: 25, fontWeight: '500', color: 'white'};
@@ -55,6 +58,9 @@ const HomeScreen = ({navigation}) => {
             onPress={MoveToFlatListUseEffect}
             title="Latihan FlatList dan useEffect"
           />
+        </View>
+        <View style={[s.flexArea, {backgroundColor: 'midnightblue'}]}>
+          <Button onPress={MoveToRNP} title="React Native Paper" />
         </View>
       </View>
     </ScrollView>
