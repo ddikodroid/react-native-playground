@@ -18,7 +18,7 @@ const News = ({navigation}) => {
   const getNewsFromAPI = () => {
     return newAPI
       .get(
-        '/everything?q=bitcoin&from=2020-12-12&sortBy=publishedAt&apiKey=411746820f4540d0b2535ed669b6e85f',
+        '/everything?q=bitcoin&from=2021-02-02&sortBy=publishedAt&apiKey=411746820f4540d0b2535ed669b6e85f',
       )
       .then(function (response) {
         setNews(response.data.articles);
