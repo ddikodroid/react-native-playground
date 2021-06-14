@@ -26,14 +26,11 @@ const HomeScreen = ({navigation}) => {
   const MoveToFlatListUseEffect = () => {
     navigation.navigate('Latihan Flat List dan useEffect');
   };
-<<<<<<< HEAD
   const MoveToRNP = () => {
     navigation.navigate('React Native Paper');
   };
 
-=======
   const isLoading = false;
->>>>>>> 1c6aa7c (use loading component)
   const fontStyling = {fontSize: 28, fontWeight: 'bold', color: 'white'};
   const fontStyling1 = {fontSize: 25, fontWeight: '500', color: 'white'};
   return (
