@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Button, StyleSheet, Text, View, Dimensions} from 'react-native';
 import {TextInput} from 'react-native-gesture-handler';
 import DataDetailsScreen from './DataDetailsScreen';
-
+import styled, {css} from 'styled-components/native';
 const RegistrationScreen = ({navigation}) => {
   const Move = () => {
     navigation.navigate('Data Details', {nama, usia, alamat});
@@ -36,6 +36,7 @@ const RegistrationScreen = ({navigation}) => {
       </View>
       <View style={s.flexArea}>
         <Button onPress={Move} title="Register" />
+        <PressableButton title="Ini Styled Button" primary />
       </View>
     </>
   );
@@ -66,3 +67,28 @@ const s = StyleSheet.create({
     borderRadius: 10,
   },
 });
+
+const ButtonContainer = styled.TouchableOpacity`
+  margin-vertical: 10px;
+  width: 120px;
+  height: 40px;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: transparent;
+  ${(props) =>
+    props.primary &&
+    css`
+      background: #049532;
+      color: black;
+    `}
+`;
+
+const ButtonText = styled.Text`
+  font-size: 16px;
+  text-align: center;
+`;
+const PressableButton = ({onPress, title}) => (
+  <ButtonContainer onPress={onPress}>
+    <ButtonText>{title}</ButtonText>
+  </ButtonContainer>
+);
